@@ -1,5 +1,5 @@
 # PIThackathonPhaserGame
-WebGame Phaser HTML Game Project for #1 PIT Hackathon
+#1 PIT Hackathon: "WebGame" Phaser HTML5 Engine Game Project.
 
 Play on http://www.schlago.de/pitgame
 
