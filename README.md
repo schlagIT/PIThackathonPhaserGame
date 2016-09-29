@@ -2,6 +2,8 @@
 
 Phaser HTML5 Engine Game Project.
 Play on http://www.schlago.de/pitgame
+or download and execute the index.html
 
-Stage is play-ready and finalized. Should only be used by the participients to look up some stuff for their own game ideas for the hackathon-event.
+Final GameStage is play-ready. 
+Should only be used by the participients to look up some stuff for their own game ideas for the hackathon-event.
 
