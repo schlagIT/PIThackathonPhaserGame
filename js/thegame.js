@@ -306,7 +306,7 @@ thegame.prototype = {
 
 
 
-    //Player-Rotation: ständig nach links-rechts um 90Grad
+    //Player-Rotation: ständige Rotation
     rotatePlayer : function()
     {
         player.angle +=rotationSpeed * rotateDirection;
@@ -409,7 +409,7 @@ thegame.prototype = {
     },
     //SPAWN - Enemies
     /*Random Zahl von 1-10 setzen, wenn echt kleiner 4 spawn ein Pilon,
-    wenn echt größer 9 spawn ein Baum*/
+    wenn echt größer 9 spawnt eine AlienBomb*/
     enemySpawn : function()
     {
         for (var i=0;i<enemySpawnCounter;i++)
@@ -453,11 +453,11 @@ thegame.prototype = {
                 //// X und Y Position der einzelnen Gegner festlegen
                 enemy2 = enemiesTree.create(i * (enemySpace + Math.random() * 2), 0, 'enemyBomb');
 
-                //Baum Animationen hinzufuegen und abspielen
+                //AlienBomb Animationen hinzufuegen und abspielen
                 enemy2.animations.add('default',[0, 1, 2, 3, 4, 5, 6, 7, 8], 5, true);
                 enemy2.animations.play('default');
 
-                //Baum Anchor und Body Setzen
+                //AlienBomb Anchor und Body Setzen
                 enemy2.anchor.x = 0.5;
                 enemy2.anchor.y = 0.5;
                 enemy2.body.width = 40;
@@ -481,7 +481,7 @@ thegame.prototype = {
 
 
 
-    // KOLLISION - Player vs Pilon
+    // KOLLISION - Player vs Mine
     playerEnemyCollisionPilon : function (player,enemy)
     {
         if (isShielded == true)
@@ -505,7 +505,7 @@ thegame.prototype = {
         }
 
     },
-    // KOLLISION - Player vs Baum
+    // KOLLISION - Player vs AlienBomb
     playerEnemyCollisionTree: function (player, enemy)
     {
         if (isShielded == true)
@@ -545,13 +545,7 @@ thegame.prototype = {
 
 
 
-
-
-
-
-
-
-    //PartikelSystem BURST für Kollision: Player vs Pilon
+    //PartikelSystem BURST für Kollision: Player vs Mine
     particleBurstPilon : function ()
     {
         emitter2.x = player.x;
@@ -559,7 +553,7 @@ thegame.prototype = {
         emitter2.start(true, enemyParticleLifetime, null, enemyParticleAmount);
     },
 
-    //PartikelSystem BURST für Kollision: Player vs Pilon
+    //PartikelSystem BURST für Kollision: Player vs Mine
     particleBurstTree : function ()
     {
         emitter4.x = player.x;

@@ -21,7 +21,6 @@ var playerDashSpeed = -300;
 //Speed mit Speed-Booster
 var powerUpYSpeed = 200;
 
-
 //Spawntime der Gegner
 var enemySpawnTime = 2;
 
@@ -39,8 +38,6 @@ var enemyParticleLifetime = 2000;
 
 //EnemyCounter_Wie viele Enemies spawnen maximal
 var enemySpawnCounter = 12;
-
-
 
 //Score
 var pointCounter = 0;
